@@ -6,7 +6,7 @@ document.getElementById("quoteForm").addEventListener("submit", async function(e
     service: e.target.service.value
   };
 
-  await fetch("https://your-n8n-webhook-url-here", {
+await fetch("http://localhost:5678/webhook-test/quote-request", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)
